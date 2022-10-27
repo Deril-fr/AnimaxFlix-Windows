@@ -1,0 +1,32 @@
+@import 'material-icons/iconfont/material-icons.css';
+@import '@vime/core/themes/default.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+    margin: 0 10vw;
+}
+
+.img {
+    background: url('/default_poster.png') center no-repeat;
+    background-size: cover;
+}
+
+.img > img {
+    animation: appear 1s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.card {
+    transition: height 0.3s;
+}
