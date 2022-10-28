@@ -20,12 +20,12 @@ jobs:
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn build
+      run: yarn build:svelte
     - name: Build Electron
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn electron:buildUnix
+      run: yarn build:electron
     - name: see directory
       run: ls
     - name: check env
@@ -66,12 +66,12 @@ jobs:
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn build
+      run: yarn build:svelte
     - name: Build Electron
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn electron:buildWin
+      run: yarn build:electron
     - name: see directory
       run: ls ./dist
     - uses: softprops/action-gh-release@v1
