@@ -15,7 +15,7 @@ jobs:
     - name: Build on MacOS
       run: npm run build:svelte
     - name: Build Electron
-      run: GH_TOKEN=${{ secrets.GITHUB_TOKEN }} npm run build:electron
+      run: npm run build:electron --publish=never
     - name: see directory
       run: ls
     - name: check env
@@ -46,7 +46,7 @@ jobs:
     - name: Build on Windows
       run: npm run build:svelte
     - name: Build Electron
-      run: GH_TOKEN=${{ secrets.GITHUB_TOKEN }} npm run build:electron
+      run: npm run build:electron --publish=never
     - name: see directory
       run: ls ./dist
     - uses: softprops/action-gh-release@v1
