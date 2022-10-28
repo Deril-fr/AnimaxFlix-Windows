@@ -25,6 +25,7 @@ LES PLUS RECENTS
 					<div class="h-full w-full relative">
 						<div class="relative w-full h-full">
 							<div class="bg-red-500 h-1 absolute bottom-0 left-0 z-50" style="width: {Math.round((episode.time / episode.duration) * 100)}%" />
+							<div class="bg-slate-300 h-1 absolute bottom-0 right-0 z-50" style="width: {100 - Math.round((episode.time / episode.duration) * 100)}%" />
 							<img src={episode.url_image} alt="" class="object-cover aspect-[200/283] w-full h-full" />
 						</div>
 

@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"private": true,
 	"description": "Animaflix - La plateforme d'animation japonaise gratuite",
 	"main": "src/electron.cjs",

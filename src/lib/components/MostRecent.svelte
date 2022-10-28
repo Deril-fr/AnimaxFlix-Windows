@@ -32,12 +32,11 @@ LES PLUS RECENTS
 							<img src={episode.url_image.replace('3', '2')} alt="" class="object-full w-full h-full aspect-[200/283]" />
 						</div>
 						<div class="absolute w-full h-[35%] group-hover:h-full bg-slate-800 bg-opacity-80 z-50 bottom-0 p-3 card">
-							<h1 class="whitespace-nowrap overflow-hidden text-ellipsis group-hover:whitespace-normal">{episode.title}</h1>
-
 							<div class="flex justify-between">
-								<p class="text-slate-300">{episode.time}</p>
+								<h1 class="whitespace-nowrap overflow-hidden text-ellipsis group-hover:whitespace-normal">{episode.title}</h1>
 								<p class="whitespace-nowrap ml-2 text-slate-300">{episode.episode}</p>
 							</div>
+							<p class="text-slate-300">{episode.time}</p>
 						</div>
 					</div>
 				</a>
