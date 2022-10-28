@@ -1,8 +1,8 @@
 {
 	"name": "sveltekit-electron",
-	"version": "0.0.4",
+	"version": "0.0.6",
 	"private": true,
-	"description": "Minimal Sveltekit + Electron starter template.",
+	"description": "Animaflix - La plateforme d'animation japonaise gratuite",
 	"main": "src/electron.cjs",
 	"type": "module",
 	"author": "Trail",

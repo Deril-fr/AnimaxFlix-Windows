@@ -101,6 +101,10 @@
 		if (e.code === 'ArrowLeft') {
 			player.currentTime -= 10;
 		}
+
+		if (e.code === 'Semicolon') {
+			mute();
+		}
 	};
 
 	function fullScreen() {
@@ -110,6 +114,10 @@
 
 	function pause() {
 		player.paused = !player.paused;
+	}
+
+	function mute() {
+		player.muted = !player.muted;
 	}
 </script>
 
@@ -155,7 +163,7 @@
 			</vm-control-group>
 
 			<ControlGroup space="top">
-				<PlaybackControl label="play/pause (space)" />
+				<PlaybackControl keys="space" />
 
 				<vm-control on:click={gotoPreviousEp}>
 					<vm-icon src="/skip-previous.svg" />
@@ -170,8 +178,8 @@
 					<h1 class="text-sm">{anime.title} Ep. {epNumber}</h1>
 				</Control>
 				<ControlSpacer />
-				<vm-volume-control />
-				<vm-fullscreen-control />
+				<vm-volume-control keys="m" />
+				<vm-fullscreen-control keys="f" />
 			</ControlGroup>
 		</Controls>
 	</Ui>
