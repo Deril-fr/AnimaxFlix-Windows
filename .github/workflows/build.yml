@@ -6,12 +6,12 @@ jobs:
   build_on_mac:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@2
       with:
         ref: electron
-    - uses: actions/setup-node@master
+    - uses: actions/setup-node@2
       with:
-        node-version: 16.13.0
+        node-version: 10.16
     - name: see directory in electron_dist
       run: ls ./electron
     - name: Install dependencies
@@ -32,7 +32,7 @@ jobs:
       run: echo $ELECTRON $FEATHERS_URL
     - name: see directory in dist
       run: ls ./dist
-    - uses: lucyio/upload-to-release@master
+    - uses: lucyio/upload-to-release@v1
       with:
         name: lucyio/electron
         path: ./dist
@@ -43,10 +43,10 @@ jobs:
   build_on_win:
     runs-on: windows-2016
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@2
       with:
         ref: feature/github-actions        
-    - uses: actions/setup-node@master
+    - uses: actions/setup-node@2
       with:
         node-version: 10.16
     - name: install node tools
@@ -78,7 +78,7 @@ jobs:
       run: yarn electron:buildWin
     - name: see directory
       run: ls ./dist
-    - uses: lucyio/upload-to-release@master
+    - uses: lucyio/upload-to-release@v1
       with:
         name: lucyio/electron
         path: ./dist
