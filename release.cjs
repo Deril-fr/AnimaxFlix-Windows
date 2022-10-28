@@ -4,7 +4,6 @@ const { execSync } = require('child_process');
 let version = increment(pkg.version);
 execSync('git add .');
 execSync('git commit -m "' + version + '"');
-execSync('git tag v' + version);
 execSync('git push --tags');
 
 //  increment version
