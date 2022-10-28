@@ -10,8 +10,6 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: see directory in electron_dist
-      run: ls ./electron
     - name: Install dependencies
       run: yarn install
     - name: Build on MacOS
