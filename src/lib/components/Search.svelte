@@ -27,7 +27,7 @@
 		}
 	}
 
-	$: $searching, ((searchPage = 0), scrollTo({ top: 0 }));
+	$: $searching, ((searchPage = 0), scrollTo({ top: 0 }), (filters = []));
 
 	$: (async () => {
 		let animes_search = $animes;

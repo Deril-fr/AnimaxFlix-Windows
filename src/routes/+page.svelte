@@ -10,6 +10,7 @@
 	import type RecentEpisode from '$lib/types/RecentEpisode';
 	import MostRecent from '$lib/components/MostRecent.svelte';
 	import Seen from '$lib/components/Seen.svelte';
+	import type { PageData } from './$types';
 
 	let animes: Writable<Anime[]> = getStore('animes', []);
 	let animesChunk: Writable<Anime[][]>;
