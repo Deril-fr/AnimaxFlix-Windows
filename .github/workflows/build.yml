@@ -11,7 +11,7 @@ jobs:
       with:
         node-version: 16
     - name: Install dependencies
-      run: yarn install
+      run: npm ci
     - name: Build on MacOS
       env:
         ELECTRON: true
@@ -50,7 +50,7 @@ jobs:
     - name: Work around for Windows Server 2019
       run: set path=%path%;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin
     - name: Install dependencies
-      run: yarn install
+      run: npm ci
     - name: check env
       env:
         ELECTRON: true
