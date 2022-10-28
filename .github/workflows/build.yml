@@ -16,12 +16,12 @@ jobs:
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn build:svelte
+      run: npm run build:svelte
     - name: Build Electron
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn build:electron
+      run: npm run build:electron
     - name: see directory
       run: ls
     - name: check env
@@ -60,12 +60,12 @@ jobs:
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn build:svelte
+      run: npm run build:svelte
     - name: Build Electron
       env:
         ELECTRON: true
         APP_VERSION_NUMBER: 0.5.9
-      run: yarn build:electron
+      run: npm run build:electron
     - name: see directory
       run: ls ./dist
     - uses: softprops/action-gh-release@v1
