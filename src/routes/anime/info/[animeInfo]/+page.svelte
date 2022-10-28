@@ -12,10 +12,12 @@
 	import EpisodeCard from '$lib/components/EpisodeCard.svelte';
 	import EpisodeInfoSkeleton from '$lib/components/EpisodeInfoSkeleton.svelte';
 	import { getStore } from '$lib/utils/hmr-stores';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 
 	let animes: Writable<Anime[]>;
+	let previous = getStore('previous_url', '');
 
 	let _anime: Anime;
 	let _episodesChunk: Episode[][];
@@ -29,11 +31,18 @@
 	}
 
 	main();
+
+	function goback() {
+		if (!$previous || $previous !== '/') goto('/');
+		else history.back();
+	}
 </script>
 
 <main class="mx-[20vw] mt-10">
 	{#if _anime && _anime.episodes}
-		<BackBtn path="/" />
+		<button on:click={() => goback()}>
+			<span class="material-icons">arrow_back</span>
+		</button>
 		<HeadCover {_anime} />
 
 		<div class="grid lg:grid-cols-[.5fr_1fr] mt-10">

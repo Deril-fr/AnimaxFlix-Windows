@@ -23,6 +23,8 @@
 		"Chrome 89"
 	],
 	"dependencies": {
+		"@inertiajs/inertia": "^0.11.1",
+		"@inertiajs/inertia-svelte": "^0.8.0",
 		"@vime/core": "^5.3.3",
 		"@vime/svelte": "^5.3.3",
 		"axios": "^1.1.3",
@@ -34,6 +36,7 @@
 		"fuse-ts": "^0.2.2",
 		"fuse.js": "^6.6.2",
 		"html-to-text": "^8.2.1",
+		"inertiajs": "^0.0.0",
 		"material-icons": "^1.12.0",
 		"svelte-carousel": "^1.0.20",
 		"svelte-local-storage-store": "^0.3.1",

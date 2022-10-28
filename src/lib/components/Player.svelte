@@ -147,7 +147,9 @@
 		<Controls pin="top" fullWidth activeDuration={3200}>
 			<Scrim gradient="down" style="--vm-scrim-z-index: 0" />
 			<Control>
-				<BackBtn path={anime.url} />
+				<button on:click={() => goto(anime.url)}>
+					<span class="material-icons">arrow_back</span>
+				</button>
 			</Control>
 		</Controls>
 
@@ -174,9 +176,10 @@
 				</vm-control>
 
 				<ControlSpacer />
-				<Control>
+				<vm-control on:click={() => goto(anime.url)}>
 					<h1 class="text-sm">{anime.title} Ep. {epNumber}</h1>
-				</Control>
+				</vm-control>
+
 				<ControlSpacer />
 				<vm-volume-control keys="m" />
 				<vm-fullscreen-control keys="f" />
